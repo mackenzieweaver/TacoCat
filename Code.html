@@ -78,17 +78,39 @@
 <pre>
 <code class="language-javascript">// Palindrome
 function Palindrome(word) {
+    const c = document.getElementById("case-sensitive").checked;
+    const n = document.getElementById("number-sensitive").checked;
+    const s = document.getElementById("special-char-sensitive").checked;
+
     const e = document.getElementById("palindrome-result");
     const r = document.getElementById("reversed-word");
+
+    if (c) {
+        word = word.toLowerCase();
+    }
+
+    if (n) {
+        word = word.replace(/[0-9]/g, '');
+    }
+
+    if (s) {
+        word = word.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '');
+    }
+
+    if (!word) {
+        e.innerHTML = `<b>n/a</b>`;
+        swal("You made Taco Cat sad", "Because you didn't enter a word", "error");
+        return;
+    }
+
     let reverse = word.split('').reverse().join('');
     r.innerHTML = `<b>${reverse}</b>`;
-    if (word.toLowerCase() == reverse.toLowerCase()) {
+    if (word == reverse) {
         e.innerHTML = `<b>Palindrome!</b>`;
     } else {
         e.innerHTML = `<b>Not a palindrome...</b>`;
     }
-}
-</code>
+}</code>
 </pre>
                             </div>
                         </div>
@@ -104,12 +126,13 @@ function Palindrome(word) {
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                             <div class="card-body">
 <pre>
-<code class="language-javascript">// Clear Buttons
+<code class="language-javascript">// Clear Button
 function ClearPalindrome() {
     document.getElementById("user-palindrome").value = '';
+    document.getElementById("palindrome-result").innerHTML = '';
+    document.getElementById("reversed-word").innerHTML = '';
     document.getElementById("user-palindrome").focus();
-}
-</code>
+}</code>
 </pre>
                             </div>
                         </div>
