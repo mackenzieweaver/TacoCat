@@ -26,31 +26,32 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Javascript Challenges</a>
+            <a class="navbar-brand" href="/Index.html">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Index.html">
-                            Home
-                        </a>
+                        <a class="nav-link" href="/Index.html">Intro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html">Solve</a>
+                        <a class="nav-link" href="/Solve.html">Solution</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Code.html">Code</a>
+                        <a class="nav-link" href="/Code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mackenzieweaver/JavascriptCodingExerciseHomework1/tree/main/JavascriptCodingExerciseHomework1" target="_blank">Git</a>
+                        <a class="nav-link" href="https://github.com/mackenzieweaver/JavascriptCodingExerciseHomework1/tree/main/JavascriptCodingExerciseHomework1" target="_blank">Github</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://mackenzie-weaver.netlify.app/" target="_blank">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">YouTube</a>
                     </li>
                 </ul>
             </div>
@@ -61,217 +62,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 text-center offset-2">
-                <h1 class="mt-5">This Page shows my JS code</h1>
+                <h1 class="mt-5">Click on something to see my javascript code</h1>
                 <p class="lead">Syntax is highlighted using Prism.js</p>
                 <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Add
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Sum
-function AddNumbers(num1, num2, num3, num4, num5) {
-    let arr = [];
-    for (let i = 0; i < arguments.length; i++) {
-        if (!isNaN(arguments[i])) {
-            arr.push(arguments[i]);
-        }
-    }
-    const e = document.getElementById("numbers-result");
-    if (arr.length == 0) {
-        e.innerHTML = `<b>none</b>`;
-    } else {
-        e.innerHTML = `<b>${arr.reduce((acc, cur) => acc + cur, 0)}</b>`;
-    }
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="acc-least">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseLeast" aria-expanded="true" aria-controls="collapseLeast">
-                                    Least
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseLeast" class="collapse" aria-labelledby="acc-least" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Least
-function Least(num1, num2, num3, num4, num5) {
-    let arr = [];
-    for (let i = 0; i < arguments.length; i++) {
-        if (!isNaN(arguments[i])) {
-        arr.push(arguments[i]);
-        }
-    }
-    const e = document.getElementById("numbers-result");
-    if (arr.length == 0) {
-        e.innerHTML = `<b>none</b>`;
-    } else {
-        e.innerHTML = `<b>${Math.min(...arr)}</b>`;
-    }
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="acc-greatest">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseGreatest" aria-expanded="true" aria-controls="collapseGreatest">
-                                    Greatest
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseGreatest" class="collapse" aria-labelledby="acc-greatest" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Greatest
-function Most(num1, num2, num3, num4, num5) {
-    let arr = [];
-    for (let i = 0; i < arguments.length; i++) {
-        if (!isNaN(arguments[i])) {
-        arr.push(arguments[i]);
-        }
-    }
-    const e = document.getElementById("numbers-result");
-    if (arr.length == 0) {
-        e.innerHTML = `<b>none</b>`;
-    } else {
-        e.innerHTML = `<b>${Math.max(...arr)}</b>`;
-    }
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="acc-mean">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseMean" aria-expanded="true" aria-controls="collapseMean">
-                                    Mean
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseMean" class="collapse" aria-labelledby="acc-mean" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Mean
-function Average(num1, num2, num3, num4, num5) {
-    let arr = [];
-    for (let i = 0; i < arguments.length; i++) {
-        if (!isNaN(arguments[i])) {
-            arr.push(arguments[i]);
-        }
-    }
-    const e = document.getElementById("numbers-result");
-    if (arr.length == 0) {
-        e.innerHTML = `<b>none</b>`;
-    } else {
-        e.innerHTML = `<b>${arr.reduce((acc, cur) => acc + cur, 0) / arr.length}</b>`;
-    }
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="acc-product">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="false" aria-controls="collapseProduct">
-                                    Product
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseProduct" class="collapse" aria-labelledby="acc-product" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Product
-function Product(num1, num2, num3, num4, num5) {
-    let arr = [];
-    for (let i = 0; i < arguments.length; i++) {
-        if (!isNaN(arguments[i])) {
-            arr.push(arguments[i]);
-        }
-    }
-    const e = document.getElementById("numbers-result");
-    if (arr.length < 2) {
-        e.innerHTML = `<b>none</b>`;
-    } else {
-        e.innerHTML = `<b>${arr.reduce((acc, cur) => acc * cur, 1)}</b>`;
-    }
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Factorial
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Factorial
-function Factorial(num1) {
-    const e = document.getElementById("factorial-result");
-    let result = 1;
-    for (let i = num1; i > 1; i--) {
-        result *= i;
-    }
-    e.innerHTML = `<b>${result}</b>`;
-}</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Fizz Buzz
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-<pre>
-<code class="language-javascript">// Fizz Buzz
-function FizzBuzz(fizz, buzz, upperLimit) {
-    for (let i = 1; i <= upperLimit; i++) {
-        if ((i % fizz == 0) && (i % buzz == 0)) {
-            console.log('FizzBuzz');
-        } else if (i % fizz == 0) {
-            console.log('Fizz');
-        } else if (i % buzz == 0) {
-            console.log('Buzz');
-        } else {
-            console.log(i);
-        }
-    }
-}
-</code>
-</pre>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <h2 class="mb-0">
@@ -304,7 +97,7 @@ function Palindrome(word) {
                         <div class="card-header" id="headingFive">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Clear Buttons
+                                    Clear Button
                                 </button>
                             </h2>
                         </div>
@@ -312,27 +105,6 @@ function Palindrome(word) {
                             <div class="card-body">
 <pre>
 <code class="language-javascript">// Clear Buttons
-function ClearCalcBtns() {
-    document.getElementById("num1").value = '';
-    document.getElementById("num2").value = '';
-    document.getElementById("num3").value = '';
-    document.getElementById("num4").value = '';
-    document.getElementById("num5").value = '';
-    document.getElementById("num1").focus();
-}
-
-function ClearFactBtn() {
-    document.getElementById("factorial-number").value = '';
-    document.getElementById("factorial-number").focus();
-}
-
-function ClearFizzBuzz() {
-    document.getElementById("fizz-num").value = '';
-    document.getElementById("buzz-num").value = '';
-    document.getElementById("upper-limit").value = '';
-    document.getElementById("fizz-num").focus();
-}
-
 function ClearPalindrome() {
     document.getElementById("user-palindrome").value = '';
     document.getElementById("user-palindrome").focus();
