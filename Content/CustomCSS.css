@@ -37,3 +37,8 @@
     font-size: 14px;
     font-style: italic;
 }
+
+.palindrome-checkbox {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}

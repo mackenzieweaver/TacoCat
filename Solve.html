@@ -76,6 +76,23 @@
                 <button id="clear-palindrome" class="btn btn-danger" onclick="ClearPalindrome()">Clear</button>
                 <button class="btn btn-dark" onclick="Palindrome(document.getElementById('user-palindrome').value)">Check</button>
             </div>
+            <div id="checkboxes" class="row justify-content-center">
+                <!-- Case Sensitive -->
+                <div class="palindrome-checkbox">
+                    <input type="checkbox" id="case-sensitive" name="case-sensitive" value="case-sensitive">
+                    <label for="case-sensitive"> Case Insensitive</label><br>
+                </div>
+                <!-- Number Sensitive -->
+                <div class="palindrome-checkbox">
+                    <input type="checkbox" id="number-sensitive" name="number-sensitive" value="number-sensitive">
+                    <label for="number-sensitive"> No Numbers</label><br>
+                </div>
+                <!-- Special Character Sensitive -->
+                <div class="palindrome-checkbox">
+                    <input type="checkbox" id="special-char-sensitive" name="special-char-sensitive" value="special-char-sensitive">
+                    <label for="special-char-sensitive"> No Special Characters</label><br>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <p class="result-class text-left">Reversed String: <span id="reversed-word"></span></p>
             </div>
@@ -92,6 +109,9 @@
 
     <!-- My Custom JS -->
     <script src="Scripts/CustomJS.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 
