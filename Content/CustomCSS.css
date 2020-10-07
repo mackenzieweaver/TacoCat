@@ -47,3 +47,18 @@
     margin-right: 30px;
     margin-bottom: 30px;
 }
+
+.p-3 {
+    padding: .5rem !important;
+}
+
+.mb-5, .my-5 {
+    text-align: left;
+    margin-bottom: 1rem !important;
+    width: 40%;
+}
+
+#reversed-word, #palindrome-result {
+    width: 100%;
+    text-align: end;
+}

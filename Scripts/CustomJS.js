@@ -45,5 +45,8 @@ function ClearPalindrome() {
     document.getElementById("user-palindrome").value = '';
     document.getElementById("palindrome-result").innerHTML = '';
     document.getElementById("reversed-word").innerHTML = '';
+    document.getElementById("case-sensitive").checked = false;
+    document.getElementById("number-sensitive").checked = false;;
+    document.getElementById("special-char-sensitive").checked = false;
     document.getElementById("user-palindrome").focus();
 }
