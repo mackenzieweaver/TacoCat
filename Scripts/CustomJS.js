@@ -33,7 +33,7 @@ function Palindrome(word) {
     let reverse = word.split('').reverse().join('');
     // output the reversed word
     r.innerHTML = `<b>${reverse}</b>`;
-    // Check if it's a palindrome
+    // Check if it's a palindrome and output answer
     if (word == reverse) {
         e.innerHTML = `<b>Palindrome!</b>`;
     } else {
@@ -49,4 +49,16 @@ function ClearPalindrome() {
     document.getElementById("number-sensitive").checked = false;;
     document.getElementById("special-char-sensitive").checked = false;
     document.getElementById("user-palindrome").focus();
+}
+
+function CheckAll() {
+    if (document.getElementById("check-all").checked) {
+        document.getElementById("case-sensitive").checked = true;
+        document.getElementById("number-sensitive").checked = true;;
+        document.getElementById("special-char-sensitive").checked = true;
+    } else {
+        document.getElementById("case-sensitive").checked = false;
+        document.getElementById("number-sensitive").checked = false;;
+        document.getElementById("special-char-sensitive").checked = false;
+    }
 }
