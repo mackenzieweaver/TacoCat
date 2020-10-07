@@ -36,5 +36,7 @@ function Palindrome(word) {
 // Clear Button
 function ClearPalindrome() {
     document.getElementById("user-palindrome").value = '';
+    document.getElementById("palindrome-result").innerHTML = '';
+    document.getElementById("reversed-word").innerHTML = '';
     document.getElementById("user-palindrome").focus();
 }
