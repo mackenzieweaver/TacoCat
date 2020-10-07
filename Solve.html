@@ -71,11 +71,15 @@
                 Enter a word or phrase in the box and click 'check'. Clear will clear the input box and refocus it.
             </p>
             <hr class="my-4">
-            <div id="palindrome-section" class="row  justify-content-center">
-                <input id="user-palindrome" type="text" placeholder="Enter a word..." />
-                <button id="clear-palindrome" class="btn btn-danger" onclick="ClearPalindrome()">Clear</button>
-                <button class="btn btn-dark" onclick="Palindrome(document.getElementById('user-palindrome').value)">Check</button>
+
+            <div id="palindrome-section" class="row justify-content-center input-group mb-3">
+                <input id="user-palindrome" type="text" class="form-control" placeholder="Enter a word..." />
+                <div class="input-group-append">
+                    <button id="clear-palindrome" class="btn btn-danger" onclick="ClearPalindrome()">Clear</button>
+                    <button class="btn btn-dark" onclick="Palindrome(document.getElementById('user-palindrome').value)">Check</button>
+                </div>
             </div>
+
             <div id="checkboxes" class="row justify-content-center">
                 <!-- Case Sensitive -->
                 <div class="palindrome-checkbox">
