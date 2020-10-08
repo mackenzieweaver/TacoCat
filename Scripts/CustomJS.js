@@ -1,4 +1,7 @@
-﻿// Palindrome
+﻿// Global array holds objects of the input data
+let data = [];
+
+// Palindrome
 function Palindrome(word) {
     // Get elements from DOM
     const c = document.getElementById("case-sensitive").checked;
@@ -39,7 +42,17 @@ function Palindrome(word) {
     } else {
         e.innerHTML = `<b>Not a palindrome...</b>`;
     }
+
+    // Store data
+    let obj = {
+        input: document.getElementById("user-palindrome").value,
+        reverse: document.getElementById("reversed-word").innerText,
+        result: document.getElementById("palindrome-result").innerText
+    }
+    data.push(obj);
+    console.log(data);
 }
+
 // Clear Button
 function ClearPalindrome() {
     document.getElementById("user-palindrome").value = '';
