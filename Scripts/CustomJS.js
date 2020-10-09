@@ -61,6 +61,7 @@ function ClearPalindrome() {
     document.getElementById("case-sensitive").checked = false;
     document.getElementById("number-sensitive").checked = false;;
     document.getElementById("special-char-sensitive").checked = false;
+    document.getElementById("check-all").checked = false;
     document.getElementById("user-palindrome").focus();
 }
 
