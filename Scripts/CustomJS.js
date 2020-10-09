@@ -32,6 +32,10 @@ function Palindrome(word) {
         swal("You made Taco Cat sad", "Because you didn't enter a word", "error");
         return;
     }
+
+    // users input is changed according to checkbox values
+    // document.getElementById("user-palindrome").value = word;
+
     // If we get to this point we reverse the word
     let reverse = word.split('').reverse().join('');
     // output the reversed word
