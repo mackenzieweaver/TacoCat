@@ -62,8 +62,7 @@ function Palindrome(word) {
     }
     data.push(obj);
     console.log(data);
-    console.log(checks);
-    window.localStorage.setItem((i + " : " + checks), document.getElementById("palindrome-result").innerText);
+    window.localStorage.setItem((i + " - boxes: " + checks), document.getElementById("palindrome-result").innerText);
 }
 
 // Clear Button
