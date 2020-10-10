@@ -3,6 +3,7 @@ let data = [];
 
 // Palindrome
 function Palindrome(word) {
+    let checks = '';
     // Get elements from DOM
     const c = document.getElementById("case-sensitive").checked;
     const n = document.getElementById("number-sensitive").checked;
@@ -13,16 +14,19 @@ function Palindrome(word) {
     if (c) {
         // set the word to lowercase
         word = word.toLowerCase();
+        checks = checks + 'c';
     }
     // If the number-sensitive checkbox is checked
     if (n) {
         // remove the numbers
         word = word.replace(/[0-9]/g, '');
+        checks = checks + 'n';
     }
     // If the special character checkbox is checked
     if (s) {
         // remove the special characters
         word = word.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '');
+        checks = checks + 's';
     }
     // If there is no word input
     if (!word) {
@@ -46,15 +50,20 @@ function Palindrome(word) {
     } else {
         e.innerHTML = `<b>Not a palindrome...</b>`;
     }
-
+    let i = document.getElementById("user-palindrome").value;
+    let rev = document.getElementById("reversed-word").innerText;
+    let res = document.getElementById("palindrome-result").innerText;
     // Store data
     let obj = {
-        input: document.getElementById("user-palindrome").value,
-        reverse: document.getElementById("reversed-word").innerText,
-        result: document.getElementById("palindrome-result").innerText
+        input: i,
+        reverse: rev,
+        result: res,
+        checkboxes: checks
     }
     data.push(obj);
     console.log(data);
+    console.log(checks);
+    window.localStorage.setItem((i + " : " + checks), document.getElementById("palindrome-result").innerText);
 }
 
 // Clear Button
