@@ -71,44 +71,50 @@
                 Enter a word or phrase in the box and click 'check'. Clear will clear the input box and refocus it.
             </p>
             <hr class="my-4">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col align-items-center">
 
-            <div id="palindrome-section" class="row justify-content-center input-group mb-3">
-                <input id="user-palindrome" type="text" class="form-control" placeholder="Enter a word..." />
-                <div class="input-group-append">
-                    <button id="clear-palindrome" class="btn btn-danger" onclick="ClearPalindrome()">Clear</button>
-                    <button class="btn btn-dark" onclick="Palindrome(document.getElementById('user-palindrome').value)">Check</button>
+                    <div id="palindrome-section" class="row justify-content-center input-group mb-3">
+                        <input id="user-palindrome" type="text" class="form-control" placeholder="Enter a word..." />
+                        <div class="input-group-append">
+                            <button id="clear-palindrome" class="btn btn-danger" onclick="ClearPalindrome()">Clear</button>
+                            <button class="btn btn-dark" onclick="Palindrome(document.getElementById('user-palindrome').value)">Check</button>
+                        </div>
+                    </div>
+                    <div id="checkboxes" class="row justify-content-between">
+                        <!-- All -->
+                        <div class="palindrome-checkbox">
+                            <input type="checkbox" id="check-all" name="check-all" value="check-all" onclick="CheckAll()">
+                            <label for="check-all"> All: </label><br>
+                        </div>
+                        <!-- Case Sensitive -->
+                        <div class="palindrome-checkbox">
+                            <input type="checkbox" id="case-sensitive" name="case-sensitive" value="case-sensitive">
+                            <label for="case-sensitive"> Ignore Case</label><br>
+                        </div>
+                        <!-- Number Sensitive -->
+                        <div class="palindrome-checkbox">
+                            <input type="checkbox" id="number-sensitive" name="number-sensitive" value="number-sensitive">
+                            <label for="number-sensitive"> Ignore Numbers</label><br>
+                        </div>
+                        <!-- Special Character Sensitive -->
+                        <div class="palindrome-checkbox">
+                            <input type="checkbox" id="special-char-sensitive" name="special-char-sensitive" value="special-char-sensitive">
+                            <label for="special-char-sensitive"> Ignore Special Characters</label><br>
+                        </div>
+                    </div>
+                    <hr id="check-hr" class="my-4">
+                    <div class="row">
+                        <div class="p-3 mb-5 bg-white rounded">Reversed: <span id="reversed-word"></span></div>
+                        <!--<p class="result-class text-left">Reversed String: <span id="reversed-word"></span></p>-->
+                    </div>
+                    <div class="row">
+                        <div class="p-3 mb-5 bg-white rounded">Result: <span id="palindrome-result"></span></div>
+                        <!--<p class="result-class text-left">Result: <span id="palindrome-result"></span></p>-->
+                    </div>
                 </div>
-            </div>
-
-            <div id="checkboxes" class="row justify-content-center">
-                <!-- All -->
-                <div class="palindrome-checkbox">
-                    <input type="checkbox" id="check-all" name="check-all" value="check-all" onclick="CheckAll()">
-                    <label for="check-all"> All: </label><br>
-                </div>
-                <!-- Case Sensitive -->
-                <div class="palindrome-checkbox">
-                    <input type="checkbox" id="case-sensitive" name="case-sensitive" value="case-sensitive">
-                    <label for="case-sensitive"> Ignore Case</label><br>
-                </div>
-                <!-- Number Sensitive -->
-                <div class="palindrome-checkbox">
-                    <input type="checkbox" id="number-sensitive" name="number-sensitive" value="number-sensitive">
-                    <label for="number-sensitive"> Ignore Numbers</label><br>
-                </div>
-                <!-- Special Character Sensitive -->
-                <div class="palindrome-checkbox">
-                    <input type="checkbox" id="special-char-sensitive" name="special-char-sensitive" value="special-char-sensitive">
-                    <label for="special-char-sensitive"> Ignore Special Characters</label><br>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="p-3 mb-5 bg-white rounded">Reversed: <span id="reversed-word"></span></div>
-                <!--<p class="result-class text-left">Reversed String: <span id="reversed-word"></span></p>-->
-            </div>
-            <div class="row justify-content-center">
-                <div class="p-3 mb-5 bg-white rounded">Result: <span id="palindrome-result"></span></div>
-                <!--<p class="result-class text-left">Result: <span id="palindrome-result"></span></p>-->
+                <div class="col-2"></div>
             </div>
         </div>
     </div>
