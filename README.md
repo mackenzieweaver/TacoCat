@@ -1,5 +1,7 @@
 # TacoCat
 
+![Home page](https://github.com/mackenzieweaver/TacoCat/blob/main/Assets/tacocat.png)
+
 ### Cats aren't tacos
 Taco Cat is a palindrome challenge in disguise. A palindrome is a word that is spelled the same way forwards as it is backwards. 
 
